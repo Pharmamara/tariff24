@@ -1,0 +1,60 @@
+.card {
+  width: 25vw;
+  height: 25vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: box-shadow 3s ease;
+  cursor: pointer;
+  @media screen and (width<500px) {
+    width: 100vw !important;
+    height: 100vw !important;
+  }
+}
+.cardActive {
+  width: 30vw;
+  height: 30vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: box-shadow 3s ease;
+  cursor: pointer;
+  @media screen and (width<500px) {
+    width: 100vw !important;
+    height: 100vw !important;
+  }
+}
+.rc-name {
+  height: 20%;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: rgba(74, 74, 74, 0.874);
+  opacity: 40%;
+  color: white;
+  align-content: center;
+}
+.rc-price {
+  height: 40%;
+  font-weight: bold;
+  font-size: 2em;
+  padding-bottom: 2%;
+  /*background-color: rgb(120, 247, 243);*/
+  color: white;
+  align-content: center;
+}
+
+.rc-speed {
+  height: 20%;
+  font-size: 1em;
+  background-color: rgb(240, 239, 239);
+  align-content: center;
+  color: gray;
+}
+.rc-description {
+  height: 20%;
+  font-size: 1em;
+  padding-bottom: 2%;
+  background-color: rgb(209, 209, 209);
+  align-content: center;
+  color: gray;
+}
