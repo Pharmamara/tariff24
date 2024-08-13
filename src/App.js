@@ -46,6 +46,7 @@ function App() {
     selectedTariffs[index].description = `${tariffs[index].description}`;
     setTariff(selectedTariffs);
   };*/
+
   const handleClick = (event) => {
     event.currentTarget.style.animation = "myAnim 2s ease 0s 1 normal none";
   };
@@ -71,6 +72,7 @@ function App() {
               cursor: "pointer",
             }}
             onClick={handleClick}
+            //объединить изменение стилей и данных в элементе
             /*onClick={() => {
               handleChange(index);
             }}
