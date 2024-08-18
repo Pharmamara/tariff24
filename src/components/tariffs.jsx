@@ -1,4 +1,4 @@
-export const TARIFFS = [
+export const TARIFFS = Object.freeze([
   {
     label: "tariff1",
     style: { background: "#9ffceb" },
@@ -6,6 +6,7 @@ export const TARIFFS = [
     price: "руб 300 /мес",
     speed: "до 10 МБит/сек",
     description: "объем включенного трафика не ограничен",
+    selected: false,
   },
   {
     label: "tariff2",
@@ -14,6 +15,7 @@ export const TARIFFS = [
     price: "руб 400 /мес",
     speed: "до 50 МБит/сек",
     description: "объем включенного трафика не ограничен",
+    selected: false,
   },
   {
     label: "tariff3",
@@ -22,6 +24,7 @@ export const TARIFFS = [
     price: "руб 550 /мес",
     speed: "до 100 МБит/сек",
     description: "объем включенного трафика не ограничен",
+    selected: false,
   },
   {
     label: "tariff4",
@@ -30,5 +33,8 @@ export const TARIFFS = [
     price: "руб 1000 /мес",
     speed: "до 200 МБит/сек",
     description: "объем включенного трафика не ограничен",
+    selected: false,
   },
-];
+]);
+
+TARIFFS.forEach(obj => Object.freeze(obj));
