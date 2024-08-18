@@ -7,13 +7,10 @@ function App() {
   const [tariffs, setTariff] = useState(TARIFFS);
 
   const handleChange = (index) => {
-    const selectedTariffs = [...tariffs];
-    selectedTariffs[index].className = "cardActive";
-    selectedTariffs[index].name = `выбран тариф ${tariffs[index].name}`;
-    selectedTariffs[index].price = `за ${tariffs[index].price}`;
-    selectedTariffs[index].speed = `скорость ${tariffs[index].speed}`;
-    selectedTariffs[index].description = `${tariffs[index].description}`;
-    setTariff(selectedTariffs);
+    setTariff(tariffs.map((tariffItem, indexValue) => ({
+      ...tariffItem,
+      selected: indexValue === index ? true: false
+    })));
   };
 
   return (
@@ -25,22 +22,23 @@ function App() {
         alignItems: "center",
       }}
     >
-      {tariffs.map((Tariffs, index) => {
+      {tariffs.map((itemTariff, index) => {
         return (
           <div
             onClick={() => {
               handleChange(index);
             }}
             key={index}
+            className="cardActive"
           >
             <Card
-              className="cardActive"
-              style={Tariffs.style}
+              selected={itemTariff.selected}
+              style={itemTariff.style}
               key={index}
-              name={Tariffs.name}
-              price={Tariffs.price}
-              speed={Tariffs.speed}
-              description={Tariffs.description}
+              name={itemTariff.name}
+              price={itemTariff.price}
+              speed={itemTariff.speed}
+              description={itemTariff.description}
             />
           </div>
         );
